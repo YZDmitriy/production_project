@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import './index.scss';
+import './styles/index.scss';
 import { Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { MainPageAsync } from './pages/MainPage/MainPage.async';
@@ -7,7 +7,7 @@ import { AboutPageAsync } from './pages/AboutPage/AboutPage.async';
 
 export const App = () => {
   return (
-    <div className='app'>
+    <div className='app light'>
       <Link to={'/'}>Главная</Link>
       <Link to={'/about'}>О сайте</Link>
 
