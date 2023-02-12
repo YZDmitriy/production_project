@@ -12,4 +12,4 @@ export enum Theme {
   
   export const ThemeContext = createContext<ThemeContextProps>({})
 
-  export const LOCAL_STOREGE_THEME_KEY = 'theme'
+  export const LOCAL_STORAGE_THEME_KEY = 'theme'
