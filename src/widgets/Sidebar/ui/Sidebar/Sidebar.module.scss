@@ -4,7 +4,7 @@
     background: var(--inverted-bg-color);
 
     position: relative;
-    transition: width .3s;
+    transition: width 0.3s;
 }
 
 .collapsed {
@@ -17,4 +17,8 @@
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+.lang {
+    margin-left: 20px;
 }
