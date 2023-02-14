@@ -5,7 +5,6 @@ export const MainPage = () => {
     const { t, i18n } = useTranslation();
 
     return <div>
-        Новый перевод
         {t("Главная страница")}
         </div>;
 };
