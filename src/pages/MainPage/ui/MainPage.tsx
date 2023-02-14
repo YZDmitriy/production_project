@@ -5,7 +5,7 @@ export const MainPage = () => {
     const { t, i18n } = useTranslation();
 
     return <div>
-        {t("Новый перевод")}
+        Новый перевод
         {t("Главная страница")}
         </div>;
 };
