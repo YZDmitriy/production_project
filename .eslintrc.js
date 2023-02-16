@@ -59,6 +59,8 @@ module.exports = {
     '@typescript-eslint/prefer-nullish-coalescing': 'warn',
     'no-underscore-dangle': 'off',
     'i18next/no-literal-string': ['error', { markupOnly: true }],
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": "off"
   },
   globals: {
     __IS_DEV__: true,
