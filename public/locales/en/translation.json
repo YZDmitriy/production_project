@@ -4,5 +4,7 @@
   "Главная страница": "Main page",
   "Язык": "English",
   "Загрузка": "Loading...",
-  "Страница не найдена": "Not found page"
+  "Страница не найдена": "Not found page",
+  "Произошла ошибка": "Error",
+  "throw error": "throw error"
 }

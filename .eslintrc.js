@@ -28,12 +28,16 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier', 'i18next'],
   rules: {
-    indent: [2, 2],
-    'react/jsx-indent': [2, 2],
-    'react/jsx-indent-props': [
-      2,
-      { indentMode: 2, ignoreTernaryOperator: true },
-    ],
+    // 'indent': [2, 2],
+    // 'react/jsx-indent': [2, 2],
+    // 'react/jsx-indent-props': [
+    //   2,
+    //   { indentMode: 2, ignoreTernaryOperator: true },
+    // ],
+    "indent": "off",
+    "@typescript-eslint/indent": "off",
+    "space-before-function-paren": "off",
+    "@typescript-eslint/space-before-function-paren": "off",
     'react/jsx-filename-extension': [
       2,
       { extensions: ['js', 'jsx', 'ts', 'tsx'] },
@@ -61,7 +65,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'i18next/no-literal-string': ['error', { markupOnly: true }],
     "comma-dangle": "off",
-    "@typescript-eslint/comma-dangle": "off"
+    "@typescript-eslint/comma-dangle": "off",
   },
   globals: {
     __IS_DEV__: true,
