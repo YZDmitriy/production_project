@@ -2,7 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    jest: true
+    jest: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -34,10 +34,10 @@ module.exports = {
     //   2,
     //   { indentMode: 2, ignoreTernaryOperator: true },
     // ],
-    "indent": "off",
-    "@typescript-eslint/indent": "off",
-    "space-before-function-paren": "off",
-    "@typescript-eslint/space-before-function-paren": "off",
+    indent: 'off',
+    '@typescript-eslint/indent': 'off',
+    'space-before-function-paren': 'off',
+    '@typescript-eslint/space-before-function-paren': 'off',
     'react/jsx-filename-extension': [
       2,
       { extensions: ['js', 'jsx', 'ts', 'tsx'] },
@@ -63,9 +63,12 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/prefer-nullish-coalescing': 'warn',
     'no-underscore-dangle': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
-    "comma-dangle": "off",
-    "@typescript-eslint/comma-dangle": "off",
+    'i18next/no-literal-string': [
+      'error',
+      { markupOnly: true, ignoreAttribute: ['data-testid'] },
+    ],
+    'comma-dangle': 'off',
+    '@typescript-eslint/comma-dangle': 'off',
   },
   globals: {
     __IS_DEV__: true,
@@ -75,4 +78,13 @@ module.exports = {
       version: 'detect',
     },
   },
+  // отключили проверку переводов для тестовых файлов
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
 };
