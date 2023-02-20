@@ -2,29 +2,23 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    jest: true,
+    jest: true
   },
-  extends: [
-    'plugin:react/recommended',
-    'standard-with-typescript',
-    'plugin:i18next/recommended',
-  ],
-  overrides: [
-    {
-      files: ['global.d.ts'],
-      rules: {
-        'no-undef': 'off',
-      },
-    },
-  ],
+  extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
+  overrides: [{
+    files: ['global.d.ts'],
+    rules: {
+      'no-undef': 'off'
+    }
+  }],
   parserOptions: {
     parser: '@typescript-eslint-parser',
     project: './tsconfig.json',
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     ecmaVersion: 'latest',
-    sourceType: 'module',
+    sourceType: 'module'
   },
   plugins: ['react', '@typescript-eslint', 'prettier', 'i18next'],
   rules: {
@@ -38,10 +32,9 @@ module.exports = {
     '@typescript-eslint/indent': 'off',
     'space-before-function-paren': 'off',
     '@typescript-eslint/space-before-function-paren': 'off',
-    'react/jsx-filename-extension': [
-      2,
-      { extensions: ['js', 'jsx', 'ts', 'tsx'] },
-    ],
+    'react/jsx-filename-extension': [2, {
+      extensions: ['js', 'jsx', 'ts', 'tsx']
+    }],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'warn',
@@ -63,28 +56,26 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/prefer-nullish-coalescing': 'warn',
     'no-underscore-dangle': 'off',
-    'i18next/no-literal-string': [
-      'error',
-      { markupOnly: true, ignoreAttribute: ['data-testid'] },
-    ],
+    'i18next/no-literal-string': ['error', {
+      markupOnly: true,
+      ignoreAttribute: ['data-testid', 'to']
+    }],
     'comma-dangle': 'off',
-    '@typescript-eslint/comma-dangle': 'off',
+    '@typescript-eslint/comma-dangle': 'off'
   },
   globals: {
-    __IS_DEV__: true,
+    __IS_DEV__: true
   },
   settings: {
     react: {
-      version: 'detect',
-    },
+      version: 'detect'
+    }
   },
   // отключили проверку переводов для тестовых файлов
-  overrides: [
-    {
-      files: ['**/src/**/*.test.{ts,tsx}'],
-      rules: {
-        'i18next/no-literal-string': 'off',
-      },
-    },
-  ],
+  overrides: [{
+    files: ['**/src/**/*.test.{ts,tsx}'],
+    rules: {
+      'i18next/no-literal-string': 'off'
+    }
+  }]
 };
