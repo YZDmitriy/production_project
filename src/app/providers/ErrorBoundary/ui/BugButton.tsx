@@ -1,7 +1,7 @@
 /* eslint-disable i18next/no-literal-string */
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 // Компонент для тестирования Error Boundary
 export const BugButton = () => {
@@ -20,7 +20,7 @@ export const BugButton = () => {
   }, [error]);
 
   return (
-    <Button theme={ThemeButton.STANDARD} onClick={onThrow}>
+    <Button theme={ButtonTheme.STANDARD} onClick={onThrow}>
       {t('throw error')}
     </Button>
   );
