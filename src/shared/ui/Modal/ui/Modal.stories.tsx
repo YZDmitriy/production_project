@@ -20,9 +20,9 @@ Primary.args = {
   children: 'Text,Text,Text,Text,Text,Text,Text',
 };
 
-export const Dark = Template.bind({});
-Dark.args = {
-  isOpen: true,
-  children: 'Text,Text,Text,Text,Text,Text,Text',
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+// export const Dark = Template.bind({});
+// Dark.args = {
+//   isOpen: true,
+//   children: 'Text,Text,Text,Text,Text,Text,Text',
+// };
+// Dark.decorators = [ThemeDecorator(Theme.DARK)];
