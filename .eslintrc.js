@@ -26,13 +26,22 @@ module.exports = {
     },
     ecmaVersion: 'latest',
     sourceType: 'module',
+    // eslint-disable-next-line no-dupe-keys
     project: true,
+    // eslint-disable-next-line no-dupe-keys
     ecmaVersion: 'latest',
+    // eslint-disable-next-line no-dupe-keys
     sourceType: 'module',
     tsconfigRootDir: __dirname,
   },
   ignorePatterns: ['config/**', 'webpack.config.ts'],
-  plugins: ['react', '@typescript-eslint', 'prettier', 'i18next'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'prettier',
+    'i18next',
+    'react-hooks',
+  ],
   rules: {
     // 'indent': [2, 2],
     // 'react/jsx-indent': [2, 2],
@@ -69,7 +78,7 @@ module.exports = {
     '@typescript-eslint/member-delimiter-style': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
-    '@typescript-eslint/prefer-nullish-coalescing': 'warn',
+    '@typescript-eslint/prefer-nullish-coalescing': 'off',
 
     'no-underscore-dangle': 'off',
     'i18next/no-literal-string': [
@@ -81,6 +90,9 @@ module.exports = {
     ],
     'comma-dangle': 'off',
     '@typescript-eslint/comma-dangle': 'off',
+
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
   globals: {
     __IS_DEV__: true,
@@ -91,6 +103,7 @@ module.exports = {
     },
   },
   // отключили проверку переводов для тестовых файлов
+  // eslint-disable-next-line no-dupe-keys
   overrides: [
     {
       files: ['**/src/**/*.test.{ts,tsx}'],
