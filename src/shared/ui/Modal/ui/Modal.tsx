@@ -1,4 +1,3 @@
-import { useTheme } from 'app/providers/ThemeProvider';
 import React, {
   ReactNode,
   useCallback,
@@ -23,8 +22,6 @@ export const Modal = (props: ModalProps) => {
   const { className, children, isOpen, onClose } = props;
 
   const [isClosing, setIsClosing] = useState(false);
-
-  const { theme } = useTheme();
 
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
@@ -67,7 +64,6 @@ export const Modal = (props: ModalProps) => {
   const mods: Record<string, boolean> = {
     [cls.opened]: isOpen,
     [cls.isClosing]: isClosing,
-    [cls[theme]]: true,
   };
 
   return (
