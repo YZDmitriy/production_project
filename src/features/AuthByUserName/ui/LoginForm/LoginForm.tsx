@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
@@ -12,13 +12,10 @@ interface LoginFormProps {
 export const LoginForm = ({ className }: LoginFormProps) => {
   const { t } = useTranslation();
 
-  const [value, setValue] = useState('');
-
-
   return (
     <div className={classNames(cls.LoginForm, {}, [className])}>
-      <Input type="text" placeholder={'Введите имя'} className={cls.input} autoFocus={true}/>
-      <Input type="text" placeholder={'Введите пароль'} className={cls.input} />
+      <Input autofocus={true} type="text" placeholder={`${t('Введите имя')}`} className={cls.input} />
+      <Input type="text" placeholder={`${t('Введите пароль')}`} className={cls.input} />
       <Button theme={ButtonTheme.OUTLINE} className={cls.loginBtn}>
         {t('Войти')}
       </Button>

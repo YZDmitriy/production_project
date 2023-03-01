@@ -93,7 +93,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'no-param-reassign': 'off',
-    "react/display-name": 'false'
+    "react/display-name": 0
   },
   globals: {
     __IS_DEV__: true,

@@ -14,16 +14,28 @@ interface ModalProps {
   children?: ReactNode;
   isOpen?: boolean;
   onClose?: () => void;
+  lazy?: boolean;
 }
 
 const ANIMATION_DELAY = 300;
 
 export const Modal = (props: ModalProps) => {
-  const { className, children, isOpen, onClose } = props;
+  const { className, children, isOpen, onClose, lazy } = props;
 
   const [isClosing, setIsClosing] = useState(false);
 
+  const [isMount, setIsMount] = useState(false);
+
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsMount(true);
+    }
+    return () => {
+      setIsMount(false);
+    };
+  }, [isOpen]);
 
   // используем useCallback
   // что бы каждый раз не создавать ссылку
@@ -65,6 +77,10 @@ export const Modal = (props: ModalProps) => {
     [cls.opened]: isOpen,
     [cls.isClosing]: isClosing,
   };
+
+  if (lazy && !isMount) {
+    return null;
+  }
 
   return (
     <Portal>

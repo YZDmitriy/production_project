@@ -1,4 +1,10 @@
-import React, { InputHTMLAttributes, memo, useEffect, useState, useRef } from 'react';
+import React, {
+  InputHTMLAttributes,
+  memo,
+  useEffect,
+  useState,
+  useRef,
+} from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
 
@@ -25,14 +31,17 @@ export const Input = memo((props: InputProps) => {
     ...otherProps
   } = props;
 
+  const ref = useRef<HTMLInputElement>(null);
+
+  // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
   const [isFocused, setIsFocused] = useState(false);
 
   useEffect(() => {
     if (autofocus) {
       setIsFocused(true);
+      ref.current?.focus();
     }
-  }, []);
-
+  }, [autofocus]);
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     onChange?.(e.target.value);
@@ -45,8 +54,10 @@ export const Input = memo((props: InputProps) => {
       )}
       <div className={cls.inputMain}>
         <input
+          ref={ref}
           type={type}
           value={value}
+          onChange={onChangeHandler}
           className={cls.input}
           {...otherProps}
         />
