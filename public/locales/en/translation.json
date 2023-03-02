@@ -11,5 +11,9 @@
   "throw error": "throw error",
   "Переключатель": "Toggle",
   "Короткий язык": "En",
-  "Войти": "Sing In"
+  "Войти": "Sing In",
+  "Введите имя": "Enter your name",
+  "Введите пароль": "Enter password",
+  "Форма авторизации": "Form Auth",
+  "Выйти": "Exit"
 }
