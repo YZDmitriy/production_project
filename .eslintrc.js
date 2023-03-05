@@ -93,7 +93,8 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'no-param-reassign': 'off',
-    "react/display-name": 0
+    'react/display-name': 0,
+    '@typescript-eslint/no-dynamic-delete': 'warn',
   },
   globals: {
     __IS_DEV__: true,
