@@ -1,25 +1,26 @@
 import { useTranslation } from 'react-i18next';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import cls from './SidebarItem.module.scss';
-import AboutIcon from 'shared/assets/icons/about-20-20.svg';
-import MainIcon from 'shared/assets/icons/main-20-20.svg';
+import { SidebarItemType } from '../../model/items';
+import { memo } from 'react';
+import { classNames } from 'shared/lib/classNames/classNames';
 
 interface SidebarItemProps {
-  item?: 
+  item: SidebarItemType;
+  collapsed: boolean;
 }
 
-export const SidebarItem = ({}: SidebarItemProps) => {
+export const SidebarItem = memo(({ item, collapsed }: SidebarItemProps) => {
   const { t } = useTranslation();
 
   return (
     <AppLink
-      to={RoutePath.main}
+      to={item.path}
       theme={AppLinkTheme.SECONDARY}
-      className={cls.item}
+      className={classNames(cls.item, { [cls.collapsed]: collapsed })}
     >
-      <MainIcon className={cls.icon} />
-      <span className={cls.link}> {t('Главная')}</span>
+      <item.Icon className={cls.icon} />
+      <span className={cls.link}> {t(item.text)}</span>
     </AppLink>
   );
-};
+});

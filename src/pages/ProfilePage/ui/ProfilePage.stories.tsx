@@ -1,7 +1,9 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Theme } from 'app/providers/ThemeProvider';
+import React from 'react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import ProfilePage from './ProfilePage';
+import { Theme } from 'app/providers/ThemeProvider';
+import ProfilePage from 'pages/ProfilePage/ui/ProfilePage';
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
@@ -10,18 +12,16 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-  args: {
-    to: '/',
-  },
 } as ComponentMeta<typeof ProfilePage>;
 
 const Template: ComponentStory<typeof ProfilePage> = (args) => (
-  <ProfilePage {...(args as typeof ProfilePage)} />
+  <ProfilePage {...args} />
 );
 
 export const Normal = Template.bind({});
 Normal.args = {};
+Normal.decorators = [StoreDecorator({})];
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];

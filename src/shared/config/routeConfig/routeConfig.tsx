@@ -30,7 +30,7 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
     element: <AboutPage />,
   },
   [AppRoutes.PROFILE]: {
-    path: RoutePath.about,
+    path: RoutePath.profile,
     element: <ProfilePage />,
   },
   [AppRoutes.NOT_FOUND]: {
