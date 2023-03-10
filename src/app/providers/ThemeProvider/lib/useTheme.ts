@@ -14,7 +14,9 @@ export function useTheme(): useThemeResult {
   const { theme, setTheme } = useContext(ThemeContext);
 
   useEffect(() => {
-    document.body.className = theme;
+    if (theme) {
+      document.body.className = theme;
+    }
   }, [theme]);
 
   const toggleTheme = () => {
@@ -27,7 +29,7 @@ export function useTheme(): useThemeResult {
   };
 
   return {
-    theme,
+    theme: theme || Theme.LIGHT,
     toggleTheme,
   };
 }

@@ -13,9 +13,6 @@ module.exports = {
   overrides: [
     {
       files: ['global.d.ts'],
-      rules: {
-        'no-undef': 'off',
-      },
     },
   ],
   parserOptions: {
@@ -67,7 +64,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/function-component-definition': 'off',
     'no-shadow': 'off',
-    'no-undef': 'warn',
+    'no-undef': 'off',
     'import/extensions': 'off',
     'object-curly-spacing': ['warn', 'always'],
     'react/jsx-curly-brace-presence': 'off',
