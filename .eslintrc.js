@@ -92,6 +92,7 @@ module.exports = {
     'no-param-reassign': 'off',
     'react/display-name': 0,
     '@typescript-eslint/no-dynamic-delete': 'warn',
+    'multiline-ternary': ['error', 'never'],
   },
   globals: {
     __IS_DEV__: true,

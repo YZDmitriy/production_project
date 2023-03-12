@@ -28,11 +28,11 @@
   "profile": {
     "first": "Иван",
     "lastname": "Некрасов",
-    "age": 22,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Moscow",
+    "age": 9,
+    "currency": "EUR",
+    "country": "Ukraine",
+    "city": "New York",
     "username": "admin",
-    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+    "avatar": "https://www.questers.com/sites/default/files/1200x630-programmers-day.jpg"
   }
 }
