@@ -2,7 +2,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ProfileCard } from './ProfileCard';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
-import programmer from 'shared/assets/test/programmer.jpg'
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
@@ -27,7 +26,7 @@ Primary.args = {
     lastname: 'Doll',
     city: 'NY',
     currency: Currency.EUR,
-    avatar: programmer
+    avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7L0C9tvKIhH4BO5MzFHwhGIb94AhRx9dmBw&usqp=CAU'
   },
 };
 
