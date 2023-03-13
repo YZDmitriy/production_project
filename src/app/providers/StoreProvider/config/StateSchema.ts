@@ -1,6 +1,6 @@
 import { CounterSchema } from 'entities/Counter';
 import { UserSchema } from 'entities/User';
-import { LoginSchema } from 'features/AuthByUsername';
+
 import {
   AnyAction,
   EnhancedStore,
@@ -12,6 +12,7 @@ import { AxiosInstance } from 'axios';
 import { To } from 'history';
 import { NavigateOptions } from 'react-router';
 import { ProfileSchema } from 'entities/Profile';
+import { LoginSchema } from 'features/AuthByUserName';
 
 export interface StateSchema {
   counter: CounterSchema;
