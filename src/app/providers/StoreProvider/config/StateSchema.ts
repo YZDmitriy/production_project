@@ -1,6 +1,5 @@
 import { CounterSchema } from 'entities/Counter';
 import { UserSchema } from 'entities/User';
-
 import {
   AnyAction,
   EnhancedStore,
@@ -13,6 +12,7 @@ import { To } from 'history';
 import { NavigateOptions } from 'react-router';
 import { ProfileSchema } from 'entities/Profile';
 import { LoginSchema } from 'features/AuthByUserName';
+import { ArticleDetailsSchema } from 'entities/Article';
 
 export interface StateSchema {
   counter: CounterSchema;
@@ -21,6 +21,7 @@ export interface StateSchema {
   // Асинхронные редюсеры
   loginForm?: LoginSchema;
   profile?: ProfileSchema;
+  articleDetails?: ArticleDetailsSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
