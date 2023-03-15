@@ -1,0 +1,43 @@
+.Sidebar {
+  height: calc(100vh - var(--navbar-height));
+  width: var(--sidebar-width);
+  background: var(--inverted-bg-color);
+  position: relative;
+  transition: width 0.3s;
+}
+
+.collapseBtn {
+  position: absolute;
+  right: -32px;
+  bottom: 40px;
+}
+
+.lang {
+  margin-left: 20px;
+}
+
+.swithers {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.items {
+  margin-top: 20px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+}
+.collapsed .swithers {
+  flex-direction: column;
+  align-items: center;
+}
+.collapsed .lang {
+  margin-left: 0;
+}/*# sourceMappingURL=Sidebar.module.css.map */

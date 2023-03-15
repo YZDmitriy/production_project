@@ -1,0 +1,20 @@
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  margin-top: 10px;
+}
+
+.loginBtn {
+  margin-top: 10px;
+  margin-left: auto;
+}
+
+.error {
+  position: absolute;
+  color: red;
+  bottom: 10%;
+  right: 30%;
+}/*# sourceMappingURL=LoginForm.module.css.map */

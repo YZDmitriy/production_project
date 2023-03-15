@@ -10,8 +10,6 @@ const App = () => {
   const dispatch = useDispatch();
   const inited = useSelector(getUserInited);
 
-  console.log(inited)
-
   useEffect(() => {
     dispatch(userActions.initAuthData());
   }, [dispatch]);
