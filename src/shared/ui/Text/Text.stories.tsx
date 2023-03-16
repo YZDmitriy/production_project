@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Text, TextTheme } from './Text';
+import { Text, TextSize, TextTheme } from './Text';
 
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export default {
@@ -18,6 +18,20 @@ export const TiTleAndText = Template.bind({});
 TiTleAndText.args = {
   title: 'Title, Title, Title',
   text: 'Title Title Title Title Title',
+};
+
+export const TiTleAndTextSizeM = Template.bind({});
+TiTleAndTextSizeM.args = {
+  title: 'Title, Title, Title',
+  text: 'Title Title Title Title Title',
+  size: TextSize.M,
+};
+
+export const TiTleAndTextSizeL = Template.bind({});
+TiTleAndTextSizeL.args = {
+  title: 'Title, Title, Title',
+  text: 'Title Title Title Title Title',
+  size: TextSize.L,
 };
 
 export const OnlyTitle = Template.bind({});
