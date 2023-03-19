@@ -93,6 +93,7 @@ module.exports = {
     'react/display-name': 0,
     '@typescript-eslint/no-dynamic-delete': 'warn',
     'multiline-ternary': ['error', 'never'],
+    '@typescript-eslint/consistent-type-assertions': 'off',
   },
   globals: {
     __IS_DEV__: true,
@@ -114,4 +115,4 @@ module.exports = {
       },
     },
   ],
-};
+}
