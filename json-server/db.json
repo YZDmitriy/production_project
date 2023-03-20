@@ -19,9 +19,7 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": [
-        "IT"
-      ],
+      "type": ["IT"],
       "blocks": [
         {
           "id": "1",
@@ -120,14 +118,28 @@
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
-  "profile": {
-    "first": "Ivan",
-    "lastname": "Molotov",
-    "age": 99,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://img.freepik.com/free-vector/illustration-user-avatar-icon_53876-5907.jpg?w=2000"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Ivan",
+      "lastname": "Molotov",
+      "age": 99,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://png.pngtree.com/png-clipart/20190626/ourmid/pngtree-overlooking-the-programmers-office-work-png-image_1508501.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Mark",
+      "lastname": "Golovanov",
+      "age": 9,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Belgorod",
+      "username": "user_m",
+      "avatar": "https://i.ytimg.com/vi/azcrPFhaY9k/maxresdefault.jpg"
+    }
+  ]
 }
