@@ -120,6 +120,12 @@
       "userId": "2",
       "text": "дьдьщдьзьбз",
       "id": "4D4ugfX"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "neeew",
+      "id": "JhYHCy_"
     }
   ],
   "users": [
@@ -141,7 +147,7 @@
   "profile": [
     {
       "id": "1",
-      "first": "Ivan",
+      "first": "Ivann",
       "lastname": "Molotov",
       "age": 99,
       "currency": "RUB",
