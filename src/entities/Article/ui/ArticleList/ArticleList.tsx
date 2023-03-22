@@ -12,22 +12,17 @@ interface ArticleListProps {
 }
 
 export const ArticleList = memo((props: ArticleListProps) => {
-  const {
-    className,
-    articles = [],
-    isLoading,
-    view = ArticleView.SMALL,
-  } = props;
+  const { className, articles, isLoading, view = ArticleView.SMALL } = props;
 
   const renderArticle = (article: Article) => (
-    <ArticleListItem article={article} view={view} />
+    <ArticleListItem article={article} view={view} className={cls.card} />
   );
 
   console.log(articles);
 
   return (
     <div className={classNames(cls.ArticleList, {}, [className])}>
-      {articles.length > 0 ? articles?.map(renderArticle) : null}
+      {articles && articles.length > 0 ? articles?.map(renderArticle) : null}
     </div>
   );
 });

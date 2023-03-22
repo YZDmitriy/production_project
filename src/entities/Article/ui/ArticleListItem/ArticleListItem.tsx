@@ -4,7 +4,9 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticleListItem.module.scss';
 import { Text } from 'shared/ui/Text/Text';
 import { Icon } from 'shared/ui/Icon/Icon';
-import EyeIcon from 'shared/assets/icons/eye-20-20.svg'
+import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
+import { Card } from 'shared/ui/Card/Card';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
 
 interface ArticleListItemProps {
   className?: string;
@@ -14,12 +16,15 @@ interface ArticleListItemProps {
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
   const { className, article, view } = props;
-
   if (view === ArticleView.BIG) {
     <div
       className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
     >
-      {article.title}
+      <div className={cls.header}>
+        <Avatar size={30} src={article.user.avatar}/>
+        <Text text={article.user.username} className={cls.username}/>
+        <Text text={article.createdAt} className={cls.date}/>
+      </div>
     </div>;
   }
 
@@ -27,18 +32,18 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     <div
       className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
     >
-      <div className={cls.card}>
+      <Card className={cls.card}>
         <div className={cls.imageWrapper}>
           <img src={article.img} alt={article.title} className={cls.img} />
           <Text text={article.createdAt} className={cls.date} />
         </div>
         <div className={cls.infoWrapper}>
           <Text text={article.type.join(', ')} className={cls.types} />
-          <Text text={String(article.views)} className={cls.views}/>
-          <Icon Svg={EyeIcon}/>
+          <Text text={String(article.views)} className={cls.views} />
+          <Icon Svg={EyeIcon} />
         </div>
-        <Text text={article.title} className={cls.title}/>
-      </div>
+        <Text text={article.title} className={cls.title} />
+      </Card>
     </div>
   );
 });
