@@ -1,9 +1,14 @@
-import { ArticleList, ArticleView } from 'entities/Article';
 import {
+  ArticleList,
+  ArticleView,
+  ArticleViewSelector,
+} from 'entities/Article';
+import {
+  articlePageActions,
   articlePageReducer,
   getArticles,
 } from '../../model/slices/articlesPagesSlice';
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import {
   DynamicModuleLoader,
@@ -36,13 +41,22 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
   const error = useSelector(getArticlePageError);
   const view = useSelector(getArticlePageView);
 
+  const onChangeView = useCallback(
+    (view: ArticleView) => {
+      dispatch(articlePageActions.setView(view));
+    },
+    [dispatch]
+  );
+
   useInitialEffect(() => {
     dispatch(fetchArticlesList());
+    dispatch(articlePageActions.initState());
   });
 
   return (
     <DynamicModuleLoader reducers={reducers}>
       <div className={classNames(cls.ArticlesPage, {}, [className])}>
+        <ArticleViewSelector view={view} onViewClick={onChangeView} />
         <ArticleList isLoading={isLoading} view={view} articles={articles} />
       </div>
     </DynamicModuleLoader>
