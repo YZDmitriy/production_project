@@ -17,16 +17,14 @@ import {
 import cls from './ArticlesPage.module.scss';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { fetchArticlesList } from '../../model/services/fetchArticleList/fetchArticleList';
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { useSelector } from 'react-redux';
 import {
-  getArticlePageError,
-  getArticlePageHasMore,
   getArticlePageIsLoading,
-  getArticlePageNum,
   getArticlePageView,
 } from '../../model/selectors/articlesPageSelectors';
 import { Page } from 'shared/ui/Page/Page';
+import { fetchNextArticlesPage } from 'pages/ArticlesPage/model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 
 interface ArticlesPageProps {
   className?: string;
@@ -41,10 +39,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
 
   const articles = useSelector(getArticles.selectAll);
   const isLoading = useSelector(getArticlePageIsLoading);
-  const error = useSelector(getArticlePageError);
   const view = useSelector(getArticlePageView);
-  const page = useSelector(getArticlePageNum);
-  const hasMore = useSelector(getArticlePageHasMore);
 
   const onChangeView = useCallback(
     (view: ArticleView) => {
@@ -54,11 +49,8 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
   );
 
   const onLoadNextPart = useCallback(() => {
-    if (hasMore && !isLoading) {
-      dispatch(articlePageActions.setPage(page + 1));
-      dispatch(fetchArticlesList({ page: page + 1 }));
-    }
-  }, [dispatch, hasMore, isLoading, page]);
+    dispatch(fetchNextArticlesPage());
+  }, [dispatch]);
 
   useInitialEffect(() => {
     dispatch(articlePageActions.initState());

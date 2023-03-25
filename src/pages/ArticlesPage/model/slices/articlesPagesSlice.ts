@@ -6,7 +6,7 @@ import {
 } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { ArticlePageSchema } from '../types/articlePageSchema';
-import { fetchArticlesList } from '../services/fetchArticleList/fetchArticleList';
+import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 
 const articlesAdapter = createEntityAdapter<Article>({
