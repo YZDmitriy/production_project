@@ -40,7 +40,6 @@ export const Page = memo((props: PageProps) => {
   });
 
   const onScroll = useThrottle((e: UIEvent<HTMLDivElement>) => {
-    console.log('Throttle')
     dispatch(
       uiActions.setScrollPosition({
         position: e.currentTarget.scrollTop,
@@ -56,7 +55,9 @@ export const Page = memo((props: PageProps) => {
       onScroll={onScroll}
     >
       {children}
-      <div ref={triggerRef}></div>
+      {onScrollEnd ? (
+        <div className={cls.trigger} ref={triggerRef}></div>
+      ) : null}
     </section>
   );
 });

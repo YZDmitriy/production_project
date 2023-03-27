@@ -1,10 +1,5 @@
+import { ArticleList } from 'entities/Article';
 import {
-  ArticleList,
-  ArticleView,
-  ArticleViewSelector,
-} from 'entities/Article';
-import {
-  articlePageActions,
   articlePageReducer,
   getArticles,
 } from '../../model/slices/articlesPagesSlice';
@@ -25,6 +20,7 @@ import {
 import { Page } from 'widgets/Page/Page';
 import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
+import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 
 interface ArticlesPageProps {
   className?: string;
@@ -41,13 +37,6 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
   const isLoading = useSelector(getArticlePageIsLoading);
   const view = useSelector(getArticlePageView);
 
-  const onChangeView = useCallback(
-    (view: ArticleView) => {
-      dispatch(articlePageActions.setView(view));
-    },
-    [dispatch]
-  );
-
   const onLoadNextPart = useCallback(() => {
     dispatch(fetchNextArticlesPage());
   }, [dispatch]);
@@ -62,8 +51,13 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
         onScrollEnd={onLoadNextPart}
         className={classNames(cls.ArticlesPage, {}, [className])}
       >
-        <ArticleViewSelector view={view} onViewClick={onChangeView} />
-        <ArticleList isLoading={isLoading} view={view} articles={articles} />
+        <ArticlesPageFilters />
+        <ArticleList
+          isLoading={isLoading}
+          view={view}
+          articles={articles}
+          className={cls.list}
+        />
       </Page>
     </DynamicModuleLoader>
   );
