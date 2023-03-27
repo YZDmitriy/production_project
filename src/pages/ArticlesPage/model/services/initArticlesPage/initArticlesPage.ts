@@ -1,3 +1,4 @@
+import { ArticleType } from 'entities/Article/model/types/article';
 /* eslint-disable @typescript-eslint/no-invalid-void-type */
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
@@ -20,6 +21,7 @@ export const initArticlesPage = createAsyncThunk<
     const orderFromURL = searchParams.get('order') as SortOrder;
     const sortFromURL = searchParams.get('sort') as ArticlesSortField;
     const searchFromURL = searchParams.get('search');
+    const typeFromURL = searchParams.get('type') as ArticleType;
 
     if (orderFromURL) {
       dispatch(articlePageActions.setOrder(orderFromURL));
@@ -29,6 +31,9 @@ export const initArticlesPage = createAsyncThunk<
     }
     if (searchFromURL) {
       dispatch(articlePageActions.setSearch(searchFromURL));
+    }
+    if (typeFromURL) {
+      dispatch(articlePageActions.setType(typeFromURL));
     }
 
     dispatch(articlePageActions.initState());
