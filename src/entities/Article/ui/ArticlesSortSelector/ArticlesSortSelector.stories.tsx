@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ArticlesSortSelector } from './ArticlesSortSelector';
 
 export default {
-  title: 'shared/ArticlesSortSelector',
+  title: 'entities/Article/ArticlesSortSelector',
   component: ArticlesSortSelector,
   argTypes: {
     backgroundColor: { control: 'color' },
