@@ -11,10 +11,7 @@ import { AxiosInstance } from 'axios';
 import { ProfileSchema } from 'entities/Profile';
 import { LoginSchema } from 'features/AuthByUserName';
 import { ArticleDetailsSchema } from 'entities/Article';
-import {
-  ArticleDetailsCommentsSchema,
-  ArticleDetailsRecommendationsSchema,
-} from 'pages/ArticleDetailsPage';
+import { ArticleDetailsPageSchema } from 'pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from 'features/addCommentForm';
 import { ArticlePageSchema } from 'pages/ArticlesPage';
 import { UISchema } from 'features/UI';
@@ -28,10 +25,10 @@ export interface StateSchema {
   loginForm?: LoginSchema;
   profile?: ProfileSchema;
   articleDetails?: ArticleDetailsSchema;
-  articleDetailsComments?: ArticleDetailsCommentsSchema;
-  articleDetailsRecommendations?: ArticleDetailsRecommendationsSchema;
   addCommentForm?: AddCommentFormSchema;
   articlePage?: ArticlePageSchema;
+  // объединяющий редюсер
+  articleDetailsPage?: ArticleDetailsPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

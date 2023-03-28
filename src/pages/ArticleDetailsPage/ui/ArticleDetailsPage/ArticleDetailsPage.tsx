@@ -1,9 +1,6 @@
 import { ArticleDetails, ArticleList } from 'entities/Article';
 import { CommentList } from 'entities/Comment';
-import {
-  articleDetailsCommentsReducer,
-  getArticleComments,
-} from '../../model/slices/articleDetailsCommentsSlice';
+import { getArticleComments } from '../../model/slices/articleDetailsCommentsSlice';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -24,20 +21,17 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Page } from 'widgets/Page/Page';
-import {
-  articleDetailsPageRecommendationsReducer,
-  getArticleRecommendations,
-} from '../../model/slices/articleDetailsPageRecommendationsSlice';
+import { getArticleRecommendations } from '../../model/slices/articleDetailsPageRecommendationsSlice';
 import { getArticleRecommendationsIsLoading } from '../../model/selectors/recommendations';
 import { fetchArticleRecommendations } from '../../model/services/fetchArticleRecommendations/fetchArticleRecommendations';
+import { articleDetailsPageReducer } from '../../model/slices';
 
 interface ArticleDetailsPageProps {
   className?: string;
 }
 
 const reducers: ReducersList = {
-  articleDetailsComments: articleDetailsCommentsReducer,
-  articleDetailsRecommendations: articleDetailsPageRecommendationsReducer,
+  articleDetailsPage: articleDetailsPageReducer,
 };
 
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
@@ -94,6 +88,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
           articles={recommendations}
           isLoading={recommendationsIsLoading}
           className={cls.recommendations}
+          target="_blank"
         />
         <Text
           size={TextSize.L}
