@@ -1,4 +1,4 @@
-import { fetchCommentsByArticleId } from './../services/fetchCommentsByArticleId';
+import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import {
   createEntityAdapter,
   createSlice,

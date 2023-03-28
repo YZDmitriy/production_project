@@ -1,4 +1,4 @@
-import { fetchCommentsByArticleId } from '../../services//fetchCommentsByArticleId';
+import { fetchCommentsByArticleId } from '../fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { Comment } from 'entities/Comment';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
