@@ -1,3 +1,4 @@
+import { getArticleDetailsData } from 'entities/Article';
 import { getCanEditArticle } from 'pages/ArticleDetailsPage/model/selectors/article';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -18,10 +19,17 @@ export const ArticleDetailsPageHeader = memo(
     const { t } = useTranslation();
     const navigate = useNavigate();
     const canEdit = useSelector(getCanEditArticle);
+    const article = useSelector(getArticleDetailsData);
 
     const onBackToList = useCallback(() => {
       navigate(RoutePath.articles);
     }, [navigate]);
+
+    const onEditArticle = useCallback(() => {
+      if (article) {
+        navigate(`${RoutePath.article_details}${article?.id}}/edit`);
+      }
+    }, [article, navigate]);
 
     return (
       <div
@@ -33,7 +41,7 @@ export const ArticleDetailsPageHeader = memo(
         {canEdit && (
           <Button
             className={cls.editBtn}
-            onClick={onBackToList}
+            onClick={onEditArticle}
             theme={ButtonTheme.OUTLINE}
           >
             {t('Редактировать')}
