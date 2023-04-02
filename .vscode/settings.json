@@ -5,6 +5,7 @@
     "lastname",
     "localstorage",
     "reduxjs",
+    "Scroller",
     "testid"
   ],
   "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
