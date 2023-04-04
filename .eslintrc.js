@@ -38,6 +38,7 @@ module.exports = {
     'prettier',
     'i18next',
     'react-hooks',
+    'fsd-stable',
   ],
   rules: {
     // 'indent': [2, 2],
@@ -94,6 +95,7 @@ module.exports = {
     '@typescript-eslint/no-dynamic-delete': 'warn',
     'multiline-ternary': ['error', 'never'],
     '@typescript-eslint/consistent-type-assertions': 'off',
+    'fsd-stable/public-api-imports-only': 'error',
   },
   globals: {
     __IS_DEV__: true,
@@ -115,4 +117,4 @@ module.exports = {
       },
     },
   ],
-}
+};
