@@ -1,11 +1,12 @@
+/* eslint-disable fsd-stable/public-api-imports-only */
 import { Story } from '@storybook/react';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
-import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
 import { profileReducer } from 'entities/Profile';
-import { addCommentFormReducer } from 'features/addCommentForm/model/slices/addCommentFormSlice';
-import { loginReducer } from 'features/AuthByUserName/model/slice/loginSlice';
-import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
+import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices';
+import { loginReducer } from 'features/AuthByUserName/model/slice/loginSlice';
+import { addCommentFormReducer } from 'features/addCommentForm/model/slices/addCommentFormSlice';
 
 const defaultAsyncReducers: ReducersList = {
   loginForm: loginReducer,

@@ -1,4 +1,5 @@
-import { ArticleType } from 'entities/Article/model/types/article';
+// import { ArticleType } from 'entities/Article/model/types/article';
+import { ArticleType } from '../../../../../entities/Article/model/types/article';
 /* eslint-disable @typescript-eslint/no-invalid-void-type */
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
