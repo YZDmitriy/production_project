@@ -9,13 +9,13 @@ export type FlexGap = '4' | '8' | '16' | '32';
 
 const justifyClasses: Record<FlexJustify, string> = {
   start: cls.justifyStart,
-  center: cls.center,
+  center: cls.justifyCenter,
   end: cls.justifyEnd,
   between: cls.justifyBetween,
 };
 const alignClasses: Record<FlexAlign, string> = {
   start: cls.alignStart,
-  center: cls.center,
+  center: cls.alignCenter,
   end: cls.alignEnd,
 };
 const directionClasses: Record<FlexDirection, string> = {
