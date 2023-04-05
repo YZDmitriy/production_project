@@ -31,7 +31,15 @@ module.exports = {
     sourceType: 'module',
     tsconfigRootDir: __dirname,
   },
-  ignorePatterns: ['config/**', 'webpack.config.ts', '.fttemplates'],
+  ignorePatterns: [
+    'config/**',
+    'webpack.config.ts',
+    '.fttemplates',
+    'justify',
+    'align',
+    'direction',
+    'gap',
+  ],
   plugins: [
     'react',
     '@typescript-eslint',
@@ -83,7 +91,15 @@ module.exports = {
       'error',
       {
         markupOnly: true,
-        ignoreAttribute: ['data-testid', 'to', 'target'],
+        ignoreAttribute: [
+          'data-testid',
+          'to',
+          'target',
+          'justify',
+          'align',
+          'direction',
+          'gap',
+        ],
       },
     ],
     'comma-dangle': 'off',
@@ -117,4 +133,4 @@ module.exports = {
       },
     },
   ],
-};
+}
