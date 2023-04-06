@@ -20,6 +20,20 @@ TiTleAndText.args = {
   text: 'Title Title Title Title Title',
 };
 
+export const SizeM = Template.bind({});
+TiTleAndText.args = {
+  title: 'Title, Title, Title',
+  text: 'Title Title Title Title Title',
+  size: TextSize.M,
+};
+
+export const SizeS = Template.bind({});
+TiTleAndText.args = {
+  title: 'Title, Title, Title',
+  text: 'Title Title Title Title Title',
+  size: TextSize.S,
+};
+
 export const TiTleAndTextSizeM = Template.bind({});
 TiTleAndTextSizeM.args = {
   title: 'Title, Title, Title',
