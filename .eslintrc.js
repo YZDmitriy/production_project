@@ -100,7 +100,7 @@ module.exports = {
           'direction',
           'gap',
           'role',
-          'as'
+          'as',
         ],
       },
     ],
@@ -114,6 +114,8 @@ module.exports = {
     'multiline-ternary': ['error', 'never'],
     '@typescript-eslint/consistent-type-assertions': 'off',
     'fsd-stable/public-api-imports-only': 'error',
+    // eslint-disable-next-line no-dupe-keys
+    'multiline-ternary': 'off',
   },
   globals: {
     __IS_DEV__: true,
