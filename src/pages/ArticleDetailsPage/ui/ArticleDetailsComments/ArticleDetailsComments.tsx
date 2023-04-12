@@ -15,7 +15,7 @@ import { VStack } from 'shared/ui/Stack';
 
 interface ArticleDetailsCommentsProps {
   className?: string;
-  id: string;
+  id?: string;
 }
 
 export const ArticleDetailsComments = memo(
@@ -40,7 +40,7 @@ export const ArticleDetailsComments = memo(
     );
 
     return (
-      <VStack gap='16' max className={classNames('', {}, [className])}>
+      <VStack gap="16" max className={classNames('', {}, [className])}>
         <Text size={TextSize.L} title={t('Комментарии')} />
         <AddCommentForm onSendComment={onSendComment} />
         <CommentList isLoading={commentsIsLoading} comments={comments} />
