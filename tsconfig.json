@@ -32,7 +32,8 @@
     // import * as React from 'react';
     // можно писать такой
     // import React from 'react';
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true
   },
   "ts-node": {
     "compilerOptions": {
@@ -47,7 +48,5 @@
     ".eslintrc.js",
     "./config/jest/jest.config.ts"
   ],
-  "exclude": [
-    "./babel.config.json"
-  ],
+  "exclude": ["./babel.config.json"]
 }

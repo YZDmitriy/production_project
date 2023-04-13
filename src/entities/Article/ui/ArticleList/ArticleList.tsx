@@ -5,11 +5,12 @@ import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
-import { Article, ArticleView } from '../../model/types/article';
+import { Article } from '../../model/types/article';
 import { useTranslation } from 'react-i18next';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import { List, ListRowProps, WindowScroller } from 'react-virtualized';
-import { PAGE_ID } from '../../../../widgets/Page/Page';
+import { ArticleView } from '../../model/consts/articleConsts';
+import { PAGE_ID } from 'widgets/Page';
 
 interface ArticleListProps {
   className?: string;
@@ -42,7 +43,9 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
   const itemsPerRow = isBig ? 1 : 3;
 
-  const rowCount = isBig ? articles.length : Math.ceil(articles.length / itemsPerRow);
+  const rowCount = isBig
+    ? articles.length
+    : Math.ceil(articles.length / itemsPerRow);
 
   const rowRender = ({ index, isScrolling, key, style }: ListRowProps) => {
     const items = [];
@@ -88,12 +91,12 @@ export const ArticleList = memo((props: ArticleListProps) => {
         scrollTop,
       }) => (
         <div
-         // @ts-ignore
+          // @ts-ignore
           ref={registerChild}
           className={classNames(cls.ArticleList, {}, [className, cls[view]])}
         >
           {virtualized ? (
-             // @ts-ignore
+            // @ts-ignore
             <List
               height={height ?? 700}
               rowCount={rowCount}

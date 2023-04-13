@@ -1,9 +1,4 @@
-import {
-  Article,
-  ArticleBlockType,
-  ArticleTextBlock,
-  ArticleView,
-} from '../../model/types/article';
+import { Article, ArticleTextBlock } from '../../model/types/article';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticleListItem.module.scss';
@@ -17,6 +12,7 @@ import { useTranslation } from 'react-i18next';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { ArticleBlockType, ArticleView } from '../../model/consts/articleConsts';
 
 interface ArticleListItemProps {
   className?: string;

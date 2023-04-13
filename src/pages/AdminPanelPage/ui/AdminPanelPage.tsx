@@ -2,8 +2,7 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './AdminPanelPage.module.scss';
-// eslint-disable-next-line fsd-stable/public-api-imports-only
-import { Page } from 'widgets/Page/Page';
+import { Page } from 'widgets/Page';
 
 interface AdminPanelPageProps {
   className?: string;

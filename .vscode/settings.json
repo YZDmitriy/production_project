@@ -1,6 +1,6 @@
 {
   "cSpell.words": [
-    "лоадеры",
+    "consts",
     "fttemplates",
     "headlessui",
     "inited",
@@ -8,7 +8,8 @@
     "localstorage",
     "reduxjs",
     "Scroller",
-    "testid"
+    "testid",
+    "лоадеры"
   ],
   "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
   "i18n-ally.keystyle": "flat",

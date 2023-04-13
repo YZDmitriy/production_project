@@ -1,9 +1,7 @@
-// import { ArticleType } from 'entities/Article/model/types/article';
-import { ArticleType } from '../../../../../entities/Article/model/types/article';
 /* eslint-disable @typescript-eslint/no-invalid-void-type */
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
-import { ArticlesSortField } from 'entities/Article';
+import { ArticleType, ArticlesSortField } from 'entities/Article';
 import { SortOrder } from 'shared/types';
 import { getArticlePageInited } from '../../selectors/articlesPageSelectors';
 import { articlePageActions } from '../../slices/articlesPagesSlice';

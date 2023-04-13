@@ -9,7 +9,6 @@ import { getProfileError } from '../../model/selectors/getProfileError/getProfil
 import { getProfileReadOnly } from '../../model/selectors/getProfileReadOnly/getProfileReadOnly';
 import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { ValidateProfileErrors } from '../../model/types/editableProfileCardSchema';
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
 import { profileActions, profileReducer } from '../../model/slice/profileSlice';
 import { Currency } from 'entities/Currency';
@@ -22,6 +21,7 @@ import {
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
 import { VStack } from 'shared/ui/Stack';
+import { ValidateProfileErrors } from '../../model/consts/consts';
 
 interface EditableProfileCardProps {
   className?: string;
