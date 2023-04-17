@@ -1,24 +1,6 @@
-.ListBox {
+.popup {
     position: relative;
-}
-
-.trigger {
-    background: none;
-    border: none;
-    outline: none;
-    padding: 0;
-    margin: 0;
-}
-
-.options {
-    background: var(--listbox-bg);
-    position: absolute;
-    z-index: 99;
-    border-radius: 4px 4px 8px var(--listbox-bg);
-}
-
-.item {
-    padding: 10px 20px;
+    display: flex;
 }
 
 .active {
@@ -29,8 +11,13 @@
     opacity: 0.7;
 }
 
-.label {
-    margin-right: 8px;
+.trigger {
+    background: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
 }
 
 .optionsBottomRight {

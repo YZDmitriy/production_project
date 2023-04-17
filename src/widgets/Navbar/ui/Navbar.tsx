@@ -1,4 +1,9 @@
-import { getUserAuthData, isUserAdmin, isUserManager, userActions } from 'entities/User';
+import {
+  getUserAuthData,
+  isUserAdmin,
+  isUserManager,
+  userActions,
+} from 'entities/User';
 import { LoginModal } from 'features/AuthByUserName';
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -10,7 +15,11 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import cls from './Navbar.module.scss';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
+import { Dropdown } from 'shared/ui/Popover/ui/Dropdown/Dropdown';
+import { HStack } from 'shared/ui/Stack';
+import { Icon } from 'shared/ui/Icon/Icon';
+import NotificationIcon from 'shared/assets/icons/notification-20-20.svg';
+import { Popover } from 'shared/ui/Popover';
 
 interface NavbarProps {
   className?: string;
@@ -56,29 +65,42 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         >
           {t('Создать статью')}
         </AppLink>
-        <Dropdown
-          direction="bottom left"
-          className={cls.dropdown}
-          items={[
-            ...(isAdminPanelAvailable
-              ? [
-                  {
-                    content: t('Админка'),
-                    href: RoutePath.admin_panel,
-                  },
-                ]
-              : []),
-            {
-              content: t('Профиль'),
-              href: RoutePath.profile + authData.id,
-            },
-            {
-              content: t('Выйти'),
-              onClick: onLogOut,
-            },
-          ]}
-          trigger={<Avatar size={30} src={authData.avatar} />}
-        />
+        <HStack gap="16" className={cls.actions}>
+          <Popover
+            direction="bottom left"
+            trigger={
+              <Button theme={ButtonTheme.CLEAR}>
+                <Icon Svg={NotificationIcon} inverted />
+              </Button>
+            }
+          >
+            123456
+          </Popover>
+
+          <Dropdown
+            direction="bottom left"
+            className={cls.dropdown}
+            items={[
+              ...(isAdminPanelAvailable
+                ? [
+                    {
+                      content: t('Админка'),
+                      href: RoutePath.admin_panel,
+                    },
+                  ]
+                : []),
+              {
+                content: t('Профиль'),
+                href: RoutePath.profile + authData.id,
+              },
+              {
+                content: t('Выйти'),
+                onClick: onLogOut,
+              },
+            ]}
+            trigger={<Avatar size={30} src={authData.avatar} />}
+          />
+        </HStack>
       </header>
     );
   }
