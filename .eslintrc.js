@@ -39,6 +39,7 @@ module.exports = {
     'align',
     'direction',
     'gap',
+    'border',
   ],
   plugins: [
     'react',
@@ -101,6 +102,7 @@ module.exports = {
           'gap',
           'role',
           'as',
+          'border'
         ],
       },
     ],
