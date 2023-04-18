@@ -87,6 +87,7 @@
     "json-server": "^0.17.2",
     "loki": "^0.31.1",
     "mini-css-extract-plugin": "^2.5.3",
+    "react-device-detect": "^2.2.3",
     "react-refresh": "^0.14.0",
     "react-virtualized": "^9.22.3",
     "reg-cli": "^0.17.7",

@@ -9,6 +9,8 @@
 
 .links, .actions {
   margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
 .mainLink {
