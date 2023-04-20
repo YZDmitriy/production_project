@@ -1,7 +1,6 @@
-/* eslint-disable i18next/no-literal-string */
+import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 // Компонент для тестирования Error Boundary
 export const BugButton = () => {

@@ -3,17 +3,17 @@ import {
   ArticleView,
   ArticlesSortField,
   ArticleType,
-} from 'entities/Article';
+} from '@/entities/Article';
 import {
   createEntityAdapter,
   createSlice,
   PayloadAction,
 } from '@reduxjs/toolkit';
-import { StateSchema } from 'app/providers/StoreProvider';
+import { StateSchema } from '@/app/providers/StoreProvider';
 import { ArticlePageSchema } from '../types/articlePageSchema';
 import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList';
-import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
-import { SortOrder } from 'shared/types';
+import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
+import { SortOrder } from '@/shared/types';
 
 const articlesAdapter = createEntityAdapter<Article>({
   selectId: (article) => article.id,
