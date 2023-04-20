@@ -16,6 +16,8 @@ interface NotificationButtonProps {
 export const NotificationButton = memo((props: NotificationButtonProps) => {
   const { className } = props;
 
+  console.log('test');
+
   const [isOpen, setIsOpen] = useState(false);
 
   const onOpenDrawer = useCallback(() => {
