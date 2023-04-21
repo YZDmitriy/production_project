@@ -27,7 +27,10 @@ export function Dropdown(props: DropdownProps) {
   const menuClasses = [mapDirectionClass[direction]];
 
   return (
-    <Menu as="div" className={classNames(cls.Dropdown, {}, [className, popupCls.popup])}>
+    <Menu
+      as="div"
+      className={classNames(cls.Dropdown, {}, [className, popupCls.popup])}
+    >
       <Menu.Button className={popupCls.trigger}>{trigger}</Menu.Button>
       <Menu.Items className={classNames(cls.menu, {}, menuClasses)}>
         {items.map((item, index) => {
@@ -48,7 +51,7 @@ export function Dropdown(props: DropdownProps) {
                 as={AppLink}
                 to={item.href}
                 disabled={item.disabled}
-                key={index}
+                key={`drop-down-key-${index}`}
               >
                 {content}
               </Menu.Item>
@@ -56,7 +59,11 @@ export function Dropdown(props: DropdownProps) {
           }
 
           return (
-            <Menu.Item as={Fragment} disabled={item.disabled} key={index}>
+            <Menu.Item
+              as={Fragment}
+              disabled={item.disabled}
+              key={`drop-down-key-${index}`}
+            >
               {content}
             </Menu.Item>
           );
