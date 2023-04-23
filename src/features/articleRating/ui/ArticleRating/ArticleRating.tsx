@@ -1,13 +1,13 @@
-import { RatingCard } from 'entities/Rating';
+import { RatingCard } from '@/entities/Rating';
 import {
   useGetArticleRating,
   useRateArticle,
 } from '../../api/articleRatingApi';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { getUserAuthData } from 'entities/User';
+import { getUserAuthData } from '@/entities/User';
 import { useSelector } from 'react-redux';
-import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
 
 export interface ArticleRatingProps {
   className?: string;
