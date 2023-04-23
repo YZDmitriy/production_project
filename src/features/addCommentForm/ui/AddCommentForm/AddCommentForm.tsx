@@ -51,7 +51,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <HStack justify='between' max className={classNames(cls.AddCommentForm, {}, [className])}>
+      <HStack justify='center' max className={classNames(cls.AddCommentForm, {}, [className])}>
         <Input
           placeholder={t('Введите текст комментария')}
           value={text || ''}

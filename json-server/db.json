@@ -820,6 +820,13 @@
       "articleId": "14",
       "rate": 2,
       "id": "mOXAUqp"
+    },
+    {
+      "userId": "1",
+      "articleId": "4",
+      "rate": 5,
+      "feedback": "good",
+      "id": "qAl6kpj"
     }
   ],
   "profile-ratings": [

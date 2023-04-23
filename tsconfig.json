@@ -46,7 +46,8 @@
     "./src/**/*.tsx",
     "src",
     ".eslintrc.js",
-    "./config/jest/jest.config.ts"
+    "./config/jest/jest.config.ts",
+    "./vite.config.ts"
   ],
   "exclude": ["./babel.config.json"]
 }
