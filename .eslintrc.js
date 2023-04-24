@@ -126,6 +126,12 @@ module.exports = {
       },
     ],
     'fsd-stable/fsd-paths-checker': 'error',
+    'fsd-stable/fsd-layer-imports': [
+      'error',
+      {
+        ignoreImportPatterns: ['**/StoreProvider'],
+      },
+    ],
     'multiline-ternary': 'off',
   },
   globals: {
