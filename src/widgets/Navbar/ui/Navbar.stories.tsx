@@ -6,7 +6,7 @@ import { Navbar } from './Navbar';
 
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 export default {
-  title: 'widget/Navbar',
+  title: 'widgets/Navbar',
   component: Navbar,
   argTypes: {
     backgroundColor: { control: 'color' },
