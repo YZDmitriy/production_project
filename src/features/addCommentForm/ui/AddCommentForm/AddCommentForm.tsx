@@ -1,7 +1,4 @@
-import {
-  // getAddCommentFormError,
-  getAddCommentFormText,
-} from '../../model/selectors/addCommentFormSelectors';
+import { getAddCommentFormText } from '../../model/selectors/addCommentFormSelectors';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
@@ -51,7 +48,11 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <HStack justify='center' max className={classNames(cls.AddCommentForm, {}, [className])}>
+      <HStack
+        justify="center"
+        max
+        className={classNames(cls.AddCommentForm, {}, [className])}
+      >
         <Input
           placeholder={t('Введите текст комментария')}
           value={text || ''}

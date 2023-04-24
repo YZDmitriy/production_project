@@ -115,7 +115,12 @@ module.exports = {
     '@typescript-eslint/no-dynamic-delete': 'warn',
     'multiline-ternary': ['error', 'never'],
     '@typescript-eslint/consistent-type-assertions': 'off',
-    'fsd-stable/public-api-imports-only': 'error',
+    'fsd-stable/public-api-imports-only': [
+      'error',
+      {
+        alias: '@',
+      },
+    ],
     // eslint-disable-next-line no-dupe-keys
     'multiline-ternary': 'off',
   },

@@ -46,6 +46,7 @@
     "./src/**/*.tsx",
     "src",
     ".eslintrc.js",
+    "./scripts/updateImports.ts",
     "./config/jest/jest.config.ts",
     "./vite.config.ts"
   ],
