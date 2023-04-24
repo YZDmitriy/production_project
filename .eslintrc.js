@@ -121,6 +121,7 @@ module.exports = {
         alias: '@',
       },
     ],
+    'fsd-stable/fsd-paths-checker': 'error',
     // eslint-disable-next-line no-dupe-keys
     'multiline-ternary': 'off',
   },
