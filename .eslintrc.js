@@ -113,16 +113,19 @@ module.exports = {
     'no-param-reassign': 'off',
     'react/display-name': 0,
     '@typescript-eslint/no-dynamic-delete': 'warn',
-    'multiline-ternary': ['error', 'never'],
     '@typescript-eslint/consistent-type-assertions': 'off',
     'fsd-stable/public-api-imports-only': [
       'error',
       {
         alias: '@',
+        testFilesPatterns: [
+          '**/*.test.ts',
+          '**/*.test.ts',
+          '**/StoreDecorator.tsx',
+        ],
       },
     ],
     'fsd-stable/fsd-paths-checker': 'error',
-    // eslint-disable-next-line no-dupe-keys
     'multiline-ternary': 'off',
   },
   globals: {
