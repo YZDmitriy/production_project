@@ -48,6 +48,7 @@ module.exports = {
     'i18next',
     'react-hooks',
     'fsd-stable',
+    'unused-imports',
   ],
   rules: {
     // 'indent': [2, 2],
@@ -56,6 +57,7 @@ module.exports = {
     //   2,
     //   { indentMode: 2, ignoreTernaryOperator: true },
     // ],
+    'unused-imports/no-unused-imports': 'error',
     indent: 'off',
     '@typescript-eslint/indent': 'off',
     'space-before-function-paren': 'off',
@@ -154,4 +156,4 @@ module.exports = {
       },
     },
   ],
-}
+};
