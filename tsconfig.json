@@ -48,6 +48,7 @@
     ".eslintrc.js",
     "./scripts/refactoring/updateImports.ts",
     "./scripts/refactoring/createPublicApiForSharedUi.ts",
+    "./scripts/refactoring/creatingFileREADMEForAllFiles.ts",
     "./config/jest/jest.config.ts",
     "./vite.config.ts"
   ],
