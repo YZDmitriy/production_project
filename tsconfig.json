@@ -46,7 +46,8 @@
     "./src/**/*.tsx",
     "src",
     ".eslintrc.js",
-    "./scripts/updateImports.ts",
+    "./scripts/refactoring/updateImports.ts",
+    "./scripts/refactoring/createPublicApiForSharedUi.ts",
     "./config/jest/jest.config.ts",
     "./vite.config.ts"
   ],
