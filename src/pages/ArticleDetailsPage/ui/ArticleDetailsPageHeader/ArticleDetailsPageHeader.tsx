@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { HStack } from '@/shared/ui/Stack';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleEdit, getRouteArticles } from '@/shared/const/router';
 
 interface ArticleDetailsPageHeaderProps {
   className?: string;
@@ -22,27 +22,22 @@ export const ArticleDetailsPageHeader = memo(
     const article = useSelector(getArticleDetailsData);
 
     const onBackToList = useCallback(() => {
-      navigate(RoutePath.articles);
+      navigate(getRouteArticles());
     }, [navigate]);
 
     const onEditArticle = useCallback(() => {
       if (article) {
-        navigate(`${RoutePath.article_details}${article?.id}}/edit`);
+        navigate(getRouteArticleEdit(article?.id));
       }
     }, [article, navigate]);
 
     return (
-      <HStack max justify='between'
-        className={classNames('', {}, [className])}
-      >
+      <HStack max justify="between" className={classNames('', {}, [className])}>
         <Button onClick={onBackToList} theme={ButtonTheme.OUTLINE}>
           {t('Назад к списку статей')}
         </Button>
         {canEdit && (
-          <Button
-            onClick={onEditArticle}
-            theme={ButtonTheme.OUTLINE}
-          >
+          <Button onClick={onEditArticle} theme={ButtonTheme.OUTLINE}>
             {t('Редактировать')}
           </Button>
         )}
