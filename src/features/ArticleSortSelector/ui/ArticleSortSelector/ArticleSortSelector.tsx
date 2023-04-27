@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { SortOrder } from '@/shared/types';
 import { Select, SelectOption } from '@/shared/ui/Select';
-import cls from './ArticlesSortSelector.module.scss';
-import { ArticlesSortField } from '../../model/consts/articleConsts';
+import cls from './ArticleSortSelector.module.scss';
+import { ArticlesSortField } from '@/entities/Article';
 
 interface ArticlesSortSelectorProps {
   className?: string;
@@ -14,7 +14,7 @@ interface ArticlesSortSelectorProps {
   onChangeSort: (newSort: ArticlesSortField) => void;
 }
 
-export const ArticlesSortSelector = memo((props: ArticlesSortSelectorProps) => {
+export const ArticleSortSelector = memo((props: ArticlesSortSelectorProps) => {
   const { className, sort, order, onChangeOrder, onChangeSort } = props;
   const { t } = useTranslation();
 
@@ -51,7 +51,7 @@ export const ArticlesSortSelector = memo((props: ArticlesSortSelectorProps) => {
   );
 
   return (
-    <div className={classNames(cls.ArticlesSortSelector, {}, [className])}>
+    <div className={classNames(cls.ArticleSortSelector, {}, [className])}>
       <Select
         options={sortFieldOptions}
         value={sort}
