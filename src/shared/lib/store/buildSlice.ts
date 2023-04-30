@@ -16,7 +16,7 @@ export function buildSlice<
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     return useMemo(
-      () => bindActionCreators(slice.actions, dispatch),
+      // () => bindActionCreators(slice.actions, dispatch),
       [dispatch]
     );
   };
