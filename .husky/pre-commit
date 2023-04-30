@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# прогоняет eslint и др тесты только для измененных файлов
+npm lint-staged
+
 # npm run build:prod
 # npm run lint:ts
 # npm run lint:scss
