@@ -1,15 +1,19 @@
 {
   "cSpell.words": [
+    "лоадеры",
     "consts",
     "fttemplates",
     "headlessui",
     "inited",
+    "languagedetector",
     "lastname",
     "localstorage",
+    "pmmmwh",
     "reduxjs",
     "Scroller",
-    "testid",
-    "лоадеры"
+    "stylelint",
+    "svgr",
+    "testid"
   ],
   "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
   "i18n-ally.keystyle": "flat",
