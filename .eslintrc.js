@@ -40,6 +40,7 @@ module.exports = {
     'direction',
     'gap',
     'border',
+    '*.html',
   ],
   plugins: [
     'react',
