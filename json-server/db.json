@@ -760,6 +760,15 @@
         "MANAGER"
       ],
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    },
+    {
+      "id": "4",
+      "username": "testUser",
+      "password": "123",
+      "roles": [
+        "MANAGER"
+      ],
+      "avatar": ""
     }
   ],
   "profile": [
@@ -784,6 +793,17 @@
       "city": "Moscow",
       "username": "Katrin",
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    },
+    {
+      "id": "4",
+      "first": "Test",
+      "lastname": "User",
+      "age": 1,
+      "currency": "EUR",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "Test",
+      "avatar": "https://storage.jewheart.com/content/users/avatars/3746/avatar_3746_500.jpg?1558628223"
     }
   ],
   "article-ratings": [
