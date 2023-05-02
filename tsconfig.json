@@ -51,7 +51,7 @@
     "./scripts/refactoring/creatingFileREADMEForAllFiles.ts",
     "./config/jest/jest.config.ts",
     "vite.config.ts",
-    "cypress.config.ts"
+    // "cypress.config.ts"
   ],
-  "exclude": ["./babel.config.json"]
+  "exclude": ["./babel.config.json"],
 }

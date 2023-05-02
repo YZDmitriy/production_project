@@ -11,7 +11,7 @@ describe('Роутинг', () => {
             cy.get(selectByTestId('MainPage')).should('exist');
         });
         it('Переход открывает несуществующий маршрут ', () => {
-            cy.visit('/no');
+            cy.visit('/no_page');
             cy.get(selectByTestId('NotFoundPage')).should('exist');
         });
     });
