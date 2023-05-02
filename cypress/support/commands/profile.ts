@@ -2,8 +2,8 @@
 /* eslint-disable @typescript-eslint/method-signature-style */
 export const updateProfile = (firstname: string, lastname: string) => {
   cy.getByTestId('EditableProfileCardHeader.EditButton').click();
-  cy.getByTestId('ProfileCard.firstname').clear().type(firstname);
-  cy.getByTestId('ProfileCard.lastname').clear().type(lastname);
+  cy.getByTestId('ProfileCard.FirstName').clear().type(firstname);
+  cy.getByTestId('ProfileCard.LastName').clear().type(lastname);
   cy.getByTestId('EditableProfileCardHeader.SaveButton').click();
 };
 
@@ -14,13 +14,13 @@ export const resetProfile = (profileId: string) => {
     headers: { Authorization: 'boo' },
     body: {
       id: '4',
-      first: 'Test',
-      lastname: 'User',
+      first: 'test',
+      lastname: 'user',
       age: 1,
       currency: 'EUR',
       country: 'Russia',
       city: 'Moscow',
-      username: 'Test',
+      username: 'test',
       avatar:
         'https://storage.jewheart.com/content/users/avatars/3746/avatar_3746_500.jpg?1558628223',
     },

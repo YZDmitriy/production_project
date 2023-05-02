@@ -5,7 +5,7 @@ import { User } from '../../../src/entities/User';
 import { selectByTestId } from '../../helpers/selectByTestId';
 
 export const login = (
-  username: string = 'testuser',
+  username: string = 'user',
   password: string = '123'
 ) => {
   return cy

@@ -12,13 +12,13 @@ describe('Пользователь заходит на страницу проф
     cy.resetProfile(profileId);
   });
   it('И профиль успешно загружается', () => {
-    cy.getByTestId('ProfileCard.firstname').should('have.value', 'test');
+    cy.getByTestId('ProfileCard.FirstName').should('have.value', 'test');
   });
   it('И редактирует его', () => {
     const newName = 'new';
     const newLastname = 'lastname';
     cy.updateProfile(newName, newLastname);
-    cy.getByTestId('ProfileCard.firstname').should('have.value', newName);
-    cy.getByTestId('ProfileCard.lastname').should('have.value', newLastname);
+    cy.getByTestId('ProfileCard.FirstName').should('have.value', newName);
+    cy.getByTestId('ProfileCard.LastName').should('have.value', newLastname);
   });
 });

@@ -32,6 +32,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
   ignorePatterns: [
+    'cypress.config.ts',
     'config/**',
     'webpack.config.ts',
     '.fttemplates',

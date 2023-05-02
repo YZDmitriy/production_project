@@ -785,14 +785,14 @@
     },
     {
       "id": "2",
-      "first": "Katia",
-      "lastname": "Dorogkina",
-      "age": 465,
+      "first": "test",
+      "lastname": "user",
+      "age": 1,
       "currency": "EUR",
       "country": "Russia",
       "city": "Moscow",
-      "username": "Katrin",
-      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+      "username": "test",
+      "avatar": "https://storage.jewheart.com/content/users/avatars/3746/avatar_3746_500.jpg?1558628223"
     },
     {
       "id": "4",
