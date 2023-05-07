@@ -741,6 +741,10 @@
       "roles": [
         "ADMIN"
       ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCountryEnabled": true
+      },
       "avatar": "https://d1y8sb8igg2f8e.cloudfront.net/images/shutterstock_407112565.width-800.jpg"
     },
     {
@@ -750,6 +754,10 @@
       "roles": [
         "USER"
       ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCountryEnabled": false
+      },
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     },
     {
@@ -759,6 +767,10 @@
       "roles": [
         "MANAGER"
       ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCountryEnabled": false
+      },
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     },
     {
@@ -778,7 +790,7 @@
       "lastname": "Molotov",
       "age": 465,
       "currency": "EUR",
-      "country": "Russia",
+      "country": "Ukraine",
       "city": "Moscow",
       "username": "admin213",
       "avatar": "https://d1y8sb8igg2f8e.cloudfront.net/images/shutterstock_407112565.width-800.jpg"
