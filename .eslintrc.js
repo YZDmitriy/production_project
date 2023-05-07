@@ -34,6 +34,7 @@ module.exports = {
   ignorePatterns: [
     'cypress',
     'cypress.config.ts',
+    'scripts',
     'config/**',
     'webpack.config.ts',
     '.fttemplates',
