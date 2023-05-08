@@ -9,7 +9,6 @@ import { Avatar } from '@/shared/ui/Avatar';
 import { Currency, CurrencySelect } from '@/entities/Currency';
 import { Country, CountrySelect } from '@/entities/Country';
 import { HStack, VStack } from '@/shared/ui/Stack';
-import { getFeatureFlags } from '@/shared/lib/features';
 
 interface ProfileCardProps {
   className?: string;
@@ -45,8 +44,6 @@ export const ProfileCard = (props: ProfileCardProps) => {
   } = props;
 
   const { t } = useTranslation('profile');
-
-  const isCountryEnabled = getFeatureFlags('isCountryEnabled');
 
   if (isLoading) {
     return (
@@ -148,14 +145,12 @@ export const ProfileCard = (props: ProfileCardProps) => {
         readonly={readonly}
       />
 
-      {isCountryEnabled && (
-        <CountrySelect
-          className={cls.input}
-          value={data?.country}
-          onChange={onChangeCountry}
-          readonly={readonly}
-        />
-      )}
+      <CountrySelect
+        className={cls.input}
+        value={data?.country}
+        onChange={onChangeCountry}
+        readonly={readonly}
+      />
     </VStack>
   );
 };

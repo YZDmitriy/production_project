@@ -8,6 +8,8 @@ import {
   isUserManager,
 } from './model/selectors/roleSelectors';
 import { UserRole } from './model/consts/consts';
+import { useJsonSettings } from './model/selectors/jsonSettings';
+import { saveJsonSettings } from './model/services/saveJsonSettings';
 
 export {
   userActions,
@@ -20,4 +22,6 @@ export {
   isUserManager,
   getUserRoles,
   UserRole,
+  useJsonSettings,
+  saveJsonSettings
 };
