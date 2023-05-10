@@ -746,7 +746,8 @@
         "isCountryEnabled": true
       },
       "jsonSettings": {
-        "theme": "app_orange_theme"
+        "theme": "app_orange_theme",
+        "isArticlesPageWasOpened": true
       },
       "avatar": "https://d1y8sb8igg2f8e.cloudfront.net/images/shutterstock_407112565.width-800.jpg"
     },
@@ -764,7 +765,8 @@
       "jsonSettings": {
         "theme": "app_dark_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlesPageWasOpened": true
       },
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     },
@@ -782,7 +784,8 @@
       "jsonSettings": {
         "theme": "app_dark_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "settingsPageHasBeenOpen": false,
+        "isArticlesPageWasOpened": true
       },
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     },
@@ -803,7 +806,7 @@
       "lastname": "Molotov",
       "age": 465,
       "currency": "EUR",
-      "country": "Ukraine",
+      "country": "Russia",
       "city": "Moscow",
       "username": "admin213",
       "avatar": "https://d1y8sb8igg2f8e.cloudfront.net/images/shutterstock_407112565.width-800.jpg"
