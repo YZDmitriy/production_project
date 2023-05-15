@@ -743,7 +743,8 @@
       ],
       "features": {
         "isArticleRatingEnabled": true,
-        "isCountryEnabled": true
+        "isCountryEnabled": true,
+        "isAppRedesigned": true
       },
       "jsonSettings": {
         "theme": "app_orange_theme",

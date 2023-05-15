@@ -8,6 +8,8 @@ import { SidebarItem } from '../SidebarItem/SidebarItem';
 import cls from './Sidebar.module.scss';
 import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 import { VStack } from '@/shared/ui/Stack';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { AppLogo } from '@/shared/ui/AppLogo';
 
 interface SidebarProps {
   className?: string;
@@ -31,29 +33,48 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
   );
 
   return (
-    <section
-      data-testid="sidebar"
-      className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
-        className,
-      ])}
-    >
-      <Button
-        data-testid="sidebar-toggle"
-        onClick={onToggle}
-        theme={ButtonTheme.BACKGROUND_INVERTED}
-        className={cls.collapseBtn}
-        square
-        size={ButtonSize.L}
-      >
-        {collapsed ? '>' : '<'}
-      </Button>
+    <ToggleFeatures
+      feature="isAppRedesigned"
+      on={
+        <section
+          data-testid="sidebar"
+          className={classNames(
+            cls.SidebarRedesigned,
+            { [cls.collapsed]: collapsed },
+            [className]
+          )}
+        >
+          <AppLogo className={cls.appLogo} />
+        </section>
+      }
+      off={
+        <section
+          data-testid="sidebar"
+          className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
+            className,
+          ])}
+        >
+          <Button
+            data-testid="sidebar-toggle"
+            onClick={onToggle}
+            theme={ButtonTheme.BACKGROUND_INVERTED}
+            className={cls.collapseBtn}
+            square
+            size={ButtonSize.L}
+          >
+            {collapsed ? '>' : '<'}
+          </Button>
 
-      <VStack role='navigation' gap='8' className={cls.items}>{itemsList}</VStack>
+          <VStack role="navigation" gap="8" className={cls.items}>
+            {itemsList}
+          </VStack>
 
-      <div className={cls.swithers}>
-        <ThemeSwitcher />
-        <LangSwitcher short={collapsed} className={cls.lang} />
-      </div>
-    </section>
+          <div className={cls.swithers}>
+            <ThemeSwitcher />
+            <LangSwitcher short={collapsed} className={cls.lang} />
+          </div>
+        </section>
+      }
+    />
   );
 });

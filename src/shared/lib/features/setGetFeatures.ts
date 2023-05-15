@@ -10,6 +10,13 @@ export function setFeatureFlags(newFeatureFlags?: FeatureFlags) {
   }
 }
 
+// export function getFeatureFlags(flag: keyof FeatureFlags) {
+//   return featureFlags[flag];
+// }
+
 export function getFeatureFlags(flag: keyof FeatureFlags) {
+  if (!featureFlags) {
+    return false;
+  }
   return featureFlags[flag];
 }

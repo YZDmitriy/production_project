@@ -1,7 +1,5 @@
 {
   "cSpell.words": [
-    "лоадеры",
-    "ФИЧИ",
     "consts",
     "fttemplates",
     "headlessui",
@@ -11,10 +9,13 @@
     "localstorage",
     "pmmmwh",
     "reduxjs",
+    "rightbar",
     "Scroller",
     "stylelint",
     "svgr",
-    "testid"
+    "testid",
+    "лоадеры",
+    "ФИЧИ"
   ],
   "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
   "i18n-ally.keystyle": "flat",
