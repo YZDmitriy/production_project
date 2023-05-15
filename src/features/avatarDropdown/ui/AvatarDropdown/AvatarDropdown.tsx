@@ -1,7 +1,6 @@
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Avatar } from '@/shared/ui/Avatar';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import {
@@ -10,8 +9,9 @@ import {
   isUserManager,
   userActions,
 } from '@/entities/User';
-import { Dropdown } from '@/shared/ui/Popups';
 import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
+import { Dropdown } from '@/shared/ui/deprecated/Popups';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
 
 interface AvatarDropdownProps {
   className?: string;

@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
-import { HStack } from '@/shared/ui/Stack';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import { getRouteArticleEdit, getRouteArticles } from '@/shared/const/router';
+import { HStack } from '@/shared/ui/deprecated/Stack';
 
 interface ArticleDetailsPageHeaderProps {
   className?: string;

@@ -13,15 +13,15 @@ import { fetchProfileData } from '../../model/services/fetchProfileData/fetchPro
 import { profileActions, profileReducer } from '../../model/slice/profileSlice';
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
-import { Text, TextTheme } from '@/shared/ui/Text';
 import { ProfileCard } from '@/entities/Profile';
 import {
   DynamicModuleLoader,
   ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
-import { VStack } from '@/shared/ui/Stack';
 import { ValidateProfileErrors } from '../../model/consts/consts';
+import { VStack } from '@/shared/ui/deprecated/Stack';
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
 
 interface EditableProfileCardProps {
   className?: string;
