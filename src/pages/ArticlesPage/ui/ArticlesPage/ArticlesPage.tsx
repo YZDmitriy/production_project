@@ -38,7 +38,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
   });
 
   return (
-    <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>``
       <Page
         onScrollEnd={onLoadNextPart}
         className={classNames(cls.ArticlesPage, {}, [className])}
