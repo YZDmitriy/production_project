@@ -15,7 +15,7 @@ import { Page } from '@/widgets/Page';
 import { ArticleRating } from '@/features/articleRating';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { useTranslation } from 'react-i18next';
-import { VStack } from '@/shared/ui/deprecated/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { Card } from '@/shared/ui/deprecated/Card';
 
 interface ArticleDetailsPageProps {

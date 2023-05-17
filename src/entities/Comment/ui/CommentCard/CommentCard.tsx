@@ -5,7 +5,7 @@ import cls from './CommentCard.module.scss';
 import { AppLink } from '@/shared/ui/deprecated/AppLink';
 
 import { getRouteProfile } from '@/shared/const/router';
-import { VStack } from '@/shared/ui/deprecated/Stack';
+import { VStack } from '@/shared/ui/redesigned/Stack';
 import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 import { Avatar } from '@/shared/ui/deprecated/Avatar';
 import { Text } from '@/shared/ui/deprecated/Text';

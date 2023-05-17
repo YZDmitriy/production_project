@@ -22,8 +22,13 @@ import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/Articl
 import { ArticleBlockType } from '../../model/consts/articleConsts';
 import { ArticleBlock } from '../../model/types/article';
 import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
-import { Text, TextAlign, TextSize, TextTheme } from '@/shared/ui/deprecated/Text';
-import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
+import {
+  Text,
+  TextAlign,
+  TextSize,
+  TextTheme,
+} from '@/shared/ui/deprecated/Text';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Avatar } from '@/shared/ui/deprecated/Avatar';
 import { Icon } from '@/shared/ui/deprecated/Icon';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';

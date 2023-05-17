@@ -1,12 +1,12 @@
 import { Fragment, ReactNode } from 'react';
 import { Listbox as HListBox } from '@headlessui/react';
-import cls from './ListBox.module.scss';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { HStack } from '../../../../redesigned/Stack';
 import { DropdownDirection } from '@/shared/types/ui';
+import { HStack } from '../../../../redesigned/Stack';
+import { Button } from '../../../Button/Button';
+import cls from './ListBox.module.scss';
 import { mapDirectionClass } from '../../styles/consts';
 import popupCls from '../../styles/popup.module.scss';
-import { Button } from '../../../Button';
 
 export interface ListBoxItem {
   value: string;
@@ -19,20 +19,16 @@ interface ListBoxProps {
   className?: string;
   value?: string;
   defaultValue?: string;
-  onChange?: (value: string) => void;
+  onChange: (value: string) => void;
   readonly?: boolean;
   direction?: DropdownDirection;
   label?: string;
 }
 
-/**
- * Устарел, используем новые компоненты из папки redesigned
- * @deprecated
- */
 export function ListBox(props: ListBoxProps) {
   const {
-    items,
     className,
+    items,
     value,
     defaultValue,
     onChange,
@@ -41,14 +37,14 @@ export function ListBox(props: ListBoxProps) {
     label,
   } = props;
 
-  const optionsClasses = [mapDirectionClass[direction]];
+  const optionsClasses = [mapDirectionClass[direction], popupCls.menu];
 
   return (
-    <HStack>
-      {label && <span className={cls.label}>{`${label}>`}</span>}
+    <HStack gap="4">
+      {label && <span>{`${label}>`}</span>}
       <HListBox
         disabled={readonly}
-        as={'div'}
+        as="div"
         className={classNames(cls.ListBox, {}, [className, popupCls.popup])}
         value={value}
         onChange={onChange}
@@ -73,7 +69,7 @@ export function ListBox(props: ListBoxProps) {
                     [popupCls.disabled]: item.disabled,
                   })}
                 >
-                  {selected && '>'}
+                  {selected && '!!!'}
                   {item.content}
                 </li>
               )}
