@@ -2,7 +2,7 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 # прогоняет eslint и др тесты только для измененных файлов
-# npx lint-staged
+npx lint-staged
 
 # npm run build:prod
 # npm run lint:ts
