@@ -4,8 +4,7 @@ import { Overlay } from '../../redesigned/Overlay/Overlay';
 import cls from './Drawer.module.scss';
 import { Portal } from '../../redesigned/Portal';
 import {
-  AnimationProvider,
-  useAnimationLibs,
+  AnimationProvider, useAnimationLibs
 } from '@/shared/lib/components/AnimationProvider';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 
