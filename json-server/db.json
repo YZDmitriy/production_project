@@ -731,6 +731,12 @@
       "userId": "2",
       "text": "math",
       "id": "2WpZ51_"
+    },
+    {
+      "articleId": "20",
+      "userId": "1",
+      "text": "1111111",
+      "id": "rU8DrCv"
     }
   ],
   "users": [
@@ -876,6 +882,12 @@
       "rate": 5,
       "feedback": "good",
       "id": "qAl6kpj"
+    },
+    {
+      "userId": "1",
+      "articleId": "20",
+      "rate": 5,
+      "id": "2YsgEgj"
     }
   ],
   "profile-ratings": [
