@@ -750,7 +750,7 @@
       "features": {
         "isArticleRatingEnabled": true,
         "isCountryEnabled": true,
-        "isAppRedesigned": false
+        "isAppRedesigned": true
       },
       "jsonSettings": {
         "theme": "app_dark_theme",
@@ -767,7 +767,8 @@
       ],
       "features": {
         "isArticleRatingEnabled": true,
-        "isCountryEnabled": false
+        "isCountryEnabled": false,
+        "isAppRedesigned": true
       },
       "jsonSettings": {
         "theme": "app_light_theme",
