@@ -737,6 +737,12 @@
       "userId": "1",
       "text": "1111111",
       "id": "rU8DrCv"
+    },
+    {
+      "articleId": "15",
+      "userId": "1",
+      "text": "1111",
+      "id": "xb1skjA"
     }
   ],
   "users": [
@@ -889,6 +895,12 @@
       "articleId": "20",
       "rate": 5,
       "id": "2YsgEgj"
+    },
+    {
+      "userId": "1",
+      "articleId": "15",
+      "rate": 4,
+      "id": "39J7nAg"
     }
   ],
   "profile-ratings": [
